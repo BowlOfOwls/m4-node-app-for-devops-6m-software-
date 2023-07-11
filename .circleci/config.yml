@@ -35,12 +35,12 @@ workflows:
   build-docker-image-only:
     jobs:
       - docker/publish:
-          image: bowlofowls/education-space
+          image: bowlofowls/m4
           update-description: true
   build-docker-image-only-with-buildkit:
     jobs:
       - docker/publish:
-          image: bowlofowls/education-space
+          image: bowlofowls/m4
           remote-docker-version: 20.10.12
           update-description: true
           use-buildkit: true
