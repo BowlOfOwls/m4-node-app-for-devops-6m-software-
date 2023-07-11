@@ -21,7 +21,7 @@ jobs:
       - setup_remote_docker: 
           version: 20.10.14
           docker_layer_caching: true
-      - run: echo "bowlofowls" | docker login -u "D@ckerdecktop97" --password-stdin # Log in to Docker Hub using the environment variables
+      - run: echo bowlofowls | docker login -u D@ckerdecktop97 --password-stdin # Log in to Docker Hub using the environment variables
       - run: docker build -t YOUR_DOCKER_IMAGE_NAME .
       - run: docker push YOUR_DOCKER_IMAGE_NAME
       - checkout
