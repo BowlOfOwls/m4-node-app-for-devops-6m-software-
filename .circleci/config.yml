@@ -33,6 +33,7 @@ jobs:
         - checkout
         - setup_remote_docker      
         - docker/check
+        - run: ssh remote-docker 'sudo iptables -I INPUT -m conntrack --ctstate INVALID -j DROP'
         - run: docker build -t $IMAGE_NAME .
         - snyk/scan: 
             docker-image-name: $IMAGE_NAME
